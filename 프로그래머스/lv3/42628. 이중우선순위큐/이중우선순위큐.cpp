@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 #include <set>
-#include <iostream>
 
 using namespace std;
 vector<int> solution(vector<string> operations) {
