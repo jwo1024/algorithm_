@@ -7,7 +7,7 @@ using namespace std;
 vector<int> solution(vector<string> operations) {
     vector<int> answer;
 
-    set<int> numbers; // 기본 => less 내림차순 정렬
+    multiset<int> numbers; // 기본 => less 내림차순 정렬
     
     for (vector<string>::iterator iter = operations.begin(); 
          iter != operations.end(); iter++) {
