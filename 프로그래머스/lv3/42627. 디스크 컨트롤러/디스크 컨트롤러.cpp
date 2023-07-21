@@ -5,6 +5,14 @@
 
 using namespace std;
 
+// #include <iostream>
+// struct test {
+//     bool operator()(int t1, int t2) {
+//         std::cout << t1 + t2 << "\n"; 
+//         return true;
+//     }
+// };
+
 // input [작업이 요청되는 시점, 작업의 소요시간] 
 struct my_compare {
     bool operator()(vector<int> t1, vector<int> t2){
@@ -26,6 +34,9 @@ int solution(vector<vector<int>> jobs) {
     int time = 0;
     int jobs_size = jobs.size();
 
+    // test hi;
+    // hi(1, 2);
+    
     sort(jobs.rbegin(), jobs.rend()); // 내림차순 정렬
     time_compare_heap avaliable_jobs;
     
@@ -44,7 +55,7 @@ int solution(vector<vector<int>> jobs) {
         }
         else if (!jobs.empty()) // 현재 실행될 수 있는 job이 없으면 시간 업데이트
             time = jobs.back()[0];
-        else // 둘다 비어있지 않다면
+        else // 둘다 비어있다면
             break ; 
     }
     return answer / jobs_size;
