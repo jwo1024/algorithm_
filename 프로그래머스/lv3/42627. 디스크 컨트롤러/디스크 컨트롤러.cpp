@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 // input [작업이 요청되는 시점, 작업의 소요시간] 
 struct my_compare {
     bool operator()(vector<int> t1, vector<int> t2){
