@@ -16,7 +16,7 @@ vector<int> solution(vector<string> operations) {
         else if (*iter == "D -1" && !numbers.empty()){ // 최대값 삭제
             numbers.erase(numbers.begin());
         }
-        else if ((*iter)[0] == 'I') {// 숫자 삽입
+        else if ((*iter)[0] == 'I') {// 숫자 삽입 23
             (*iter).erase(0, 2);
             int i = stoi(*iter);
             numbers.insert(i);
@@ -25,8 +25,8 @@ vector<int> solution(vector<string> operations) {
             ;
     }
     if (numbers.empty()) {
-        answer.push_back(0); //[0, 0]
-        answer.push_back(0); //[0, 0]
+        answer.push_back(0);
+        answer.push_back(0);
     }
     else {
         answer.push_back(*(--(numbers.end())));
