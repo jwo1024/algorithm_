@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 #include <queue>
-#include <iostream>
 
 using namespace std;
 typedef priority_queue<int, std::vector<int>, std::greater<int>> my_type_heap;
@@ -23,7 +22,6 @@ int solution(vector<int> scoville, int K) {
         if (scoville_heap.size() < 2)
             return -1;
         new_scoville = (pop_heap(scoville_heap) + pop_heap(scoville_heap) * 2);
-        //std::cout << new_scoville << std::endl;
         scoville_heap.push(new_scoville);
         answer++;
     }
