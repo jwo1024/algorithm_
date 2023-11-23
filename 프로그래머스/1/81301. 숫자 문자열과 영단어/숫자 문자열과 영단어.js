@@ -1,3 +1,6 @@
+
+// 9:29 ~ 9:37
+
 function solution(s) {
   s = s
     .replaceAll("zero", "0")
